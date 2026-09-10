@@ -1,0 +1,324 @@
+[gd_scene format=3 uid="uid://w0gc2c6rxmld"]
+
+[ext_resource type="Script" uid="uid://8viegtkvkdky" path="res://scene/result_scene.gd" id="1_8do6i"]
+[ext_resource type="Texture2D" uid="uid://dycjudt48yeaw" path="res://assets/result/Rbackground.png" id="1_mcgou"]
+[ext_resource type="Texture2D" uid="uid://bn5owlgou8xv2" path="res://assets/result/RBheem.png" id="2_3wk80"]
+[ext_resource type="Texture2D" uid="uid://bjjj840ta8j3n" path="res://assets/result/Board.png" id="2_ym7ad"]
+[ext_resource type="FontFile" uid="uid://cq6ab0geti2pr" path="res://assets/fonts/Baloo2-ExtraBold.ttf" id="3_7lsbs"]
+[ext_resource type="Texture2D" uid="uid://cwu4rpcxq1t1l" path="res://assets/result/Rgrassright.png" id="3_u8gmv"]
+[ext_resource type="Texture2D" uid="uid://dr2x7iul0kdg0" path="res://assets/result/RGaguu.png" id="4_0osow"]
+[ext_resource type="Texture2D" uid="uid://bg51n4rdcifad" path="res://assets/result/RLeftGresss.png" id="4_cuu8a"]
+[ext_resource type="Texture2D" uid="uid://dedxrcxx1devs" path="res://assets/result/RChutki.png" id="5_3wk80"]
+[ext_resource type="Texture2D" uid="uid://bi6japsmo4thd" path="res://assets/result/RKallia.png" id="5_xfk0v"]
+[ext_resource type="Texture2D" uid="uid://dddhh6fv6436o" path="res://assets/result/miniCow.png" id="6_bgkcd"]
+[ext_resource type="Texture2D" uid="uid://bus7kxp7tyi5t" path="res://assets/start/sButterFly.png" id="9_bgkcd"]
+[ext_resource type="Texture2D" uid="uid://c1agav6v6x3k4" path="res://assets/start/sButterFly2.png" id="10_ym7ad"]
+[ext_resource type="Texture2D" uid="uid://bhmmtwv6g0jl7" path="res://assets/result/ButtonBackground.png" id="14_r3qje"]
+[ext_resource type="Texture2D" uid="uid://dr6r1pmepkq7p" path="res://assets/result/Home.png" id="15_letsk"]
+[ext_resource type="Texture2D" uid="uid://382facqmvlkf" path="res://assets/result/retry.png" id="16_h0lxe"]
+[ext_resource type="AudioStream" uid="uid://bav8q4pdkl6nw" path="res://assets/Hurray!.mp3" id="17_jqvch"]
+[ext_resource type="AudioStream" uid="uid://cv0tlrxfccvob" path="res://assets/resultSound.mp3" id="18_ye5we"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v8qb6"]
+font = ExtResource("3_7lsbs")
+font_size = 68
+font_color = Color(0.26666668, 0.101960786, 0.08627451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bvtv"]
+line_spacing = 0.0
+font = ExtResource("3_7lsbs")
+font_size = 46
+font_color = Color(0.26666668, 0.101960786, 0.08627451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oklu1"]
+font = ExtResource("3_7lsbs")
+font_size = 300
+font_color = Color(1, 0.87058824, 0.34901962, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_vw84y"]
+font = ExtResource("3_7lsbs")
+font_size = 48
+font_color = Color(0.2382802, 0.16637856, 0.013514176, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_au044"]
+load_path = "res://.godot/imported/ButtonBackground.png-d7d00cc5be7ce0af71bc1d200a07fd0d.ctex"
+
+[node name="ResultScene" type="Node2D" unique_id=1125458721]
+script = ExtResource("1_8do6i")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=324775897]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=529928401]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mcgou")
+
+[node name="Board" type="TextureRect" parent="UI" unique_id=1012750881]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -273.0
+offset_top = 45.0
+offset_right = 346.0
+offset_bottom = 321.0
+grow_horizontal = 2
+texture = ExtResource("2_ym7ad")
+
+[node name="textOne" type="Label" parent="UI/Board" unique_id=1692419302]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.5
+offset_top = 21.0
+offset_right = 119.5
+offset_bottom = 131.0
+grow_horizontal = 2
+text = "Hurray!"
+label_settings = SubResource("LabelSettings_v8qb6")
+
+[node name="textTwo" type="Label" parent="UI/Board" unique_id=2045782144]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = -46.0
+offset_right = 140.5
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Now you know number"
+label_settings = SubResource("LabelSettings_7bvtv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bheem" type="TextureRect" parent="UI" unique_id=982359051]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -592.0
+offset_right = 558.0
+offset_bottom = -42.0
+grow_vertical = 0
+texture = ExtResource("2_3wk80")
+
+[node name="Chutki" type="TextureRect" parent="UI" unique_id=299001032]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 427.0
+offset_top = -459.0
+offset_right = 727.0
+offset_bottom = -47.0
+grow_vertical = 0
+texture = ExtResource("5_3wk80")
+
+[node name="Jaggu" type="TextureRect" parent="UI" unique_id=1966162241]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -627.0
+offset_top = -434.0
+offset_right = -307.0
+offset_bottom = -80.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_0osow")
+
+[node name="Kallia" type="TextureRect" parent="UI" unique_id=456378793]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -365.0
+offset_top = -507.0
+offset_right = -85.0
+offset_bottom = -75.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_xfk0v")
+
+[node name="MiniCow" type="TextureRect" parent="UI" unique_id=872243502]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -239.0
+offset_top = -334.0
+offset_bottom = -78.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("6_bgkcd")
+
+[node name="LeftGroundGrass" type="TextureRect" parent="UI" unique_id=467550842]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -255.0
+offset_right = 578.0
+grow_vertical = 0
+texture = ExtResource("3_u8gmv")
+
+[node name="RightGroundGrass" type="TextureRect" parent="UI" unique_id=722558584]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -797.0
+offset_top = -255.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_cuu8a")
+
+[node name="ButterFly" type="TextureRect" parent="UI" unique_id=1235826754]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 270.0
+offset_top = -144.0
+offset_right = 390.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_bgkcd")
+
+[node name="ButterFlyTwo" type="TextureRect" parent="UI" unique_id=1859804597]
+anchors_preset = -1
+anchor_left = 0.51500005
+anchor_top = 0.5
+anchor_right = 0.51500005
+anchor_bottom = 0.5
+offset_left = -364.8001
+offset_top = -156.0
+offset_right = -263.8001
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_ym7ad")
+
+[node name="Label" type="Label" parent="UI" unique_id=467363388]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -222.0
+offset_right = 110.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2"
+label_settings = SubResource("LabelSettings_oklu1")
+
+[node name="HomeButton" type="TextureButton" parent="UI" unique_id=812194937]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -227.0
+offset_top = -317.0
+offset_right = 13.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("14_r3qje")
+
+[node name="HomeIcon" type="TextureRect" parent="UI/HomeButton" unique_id=1846658774]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -79.0
+offset_right = 60.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_letsk")
+
+[node name="HomeLabel" type="Label" parent="UI/HomeButton" unique_id=2076921722]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.5
+offset_top = -78.0
+offset_right = 63.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Home"
+label_settings = SubResource("LabelSettings_vw84y")
+
+[node name="ResetButton" type="TextureButton" parent="UI" unique_id=571126613]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -318.0
+offset_right = 268.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("CompressedTexture2D_au044")
+
+[node name="ResetIcon" type="TextureRect" parent="UI/ResetButton" unique_id=1109470508]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -80.0
+offset_right = 55.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_h0lxe")
+
+[node name="ResetLabel" type="Label" parent="UI/ResetButton" unique_id=575968722]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.5
+offset_top = -78.0
+offset_right = 63.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Home"
+label_settings = SubResource("LabelSettings_vw84y")
+
+[node name="HurreySound" type="AudioStreamPlayer" parent="." unique_id=990684603]
+stream = ExtResource("17_jqvch")
+
+[node name="NowYouKnowTheNumberTwoSound" type="AudioStreamPlayer" parent="." unique_id=1360994204]
+stream = ExtResource("18_ye5we")
+
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/ResetButton" to="." method="_on_reset_button_pressed"]

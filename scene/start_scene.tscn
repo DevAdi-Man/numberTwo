@@ -1,0 +1,356 @@
+[gd_scene format=3 uid="uid://c1mhqubn74m4"]
+
+[ext_resource type="Texture2D" uid="uid://dvrqpqhofj3gl" path="res://assets/background.png" id="1_ckk4e"]
+[ext_resource type="Script" uid="uid://b68qq5u8l6s80" path="res://scene/start_scene.gd" id="1_qf8ob"]
+[ext_resource type="Texture2D" uid="uid://4wkmshs07bm4" path="res://assets/start/characterKalia.png" id="2_kqmaa"]
+[ext_resource type="Texture2D" uid="uid://b8oea7g2xp2il" path="res://assets/start/sSideground.png" id="2_sm5u0"]
+[ext_resource type="Texture2D" uid="uid://c5i068p84328w" path="res://assets/start/sFlowergtround.png" id="3_d0wjd"]
+[ext_resource type="Texture2D" uid="uid://bhll6yxlx8p5o" path="res://assets/start/characterChutiki.png" id="3_qf8ob"]
+[ext_resource type="Texture2D" uid="uid://bipn2nb3kvi0s" path="res://assets/start/soundButton.png" id="4_kqmaa"]
+[ext_resource type="Texture2D" uid="uid://e5w246iv3xyw" path="res://assets/characterBheemAndGaggu.png" id="4_u1usl"]
+[ext_resource type="Texture2D" uid="uid://5ggadiyypuck" path="res://assets/start/logoBoard.png" id="5_qf8ob"]
+[ext_resource type="Texture2D" uid="uid://c1agav6v6x3k4" path="res://assets/start/sButterFly2.png" id="6_u1usl"]
+[ext_resource type="Texture2D" uid="uid://bus7kxp7tyi5t" path="res://assets/start/sButterFly.png" id="7_00nn3"]
+[ext_resource type="Texture2D" uid="uid://cte043tea1y16" path="res://assets/start/buttonBackground.png" id="9_bay0x"]
+[ext_resource type="Texture2D" uid="uid://drb8nn6bnklo6" path="res://assets/muteIcon.png" id="9_d0b1t"]
+[ext_resource type="Texture2D" uid="uid://drc0oi81yjldt" path="res://assets/start/PlayButton.png" id="10_plg0x"]
+[ext_resource type="FontFile" uid="uid://cq6ab0geti2pr" path="res://assets/fonts/Baloo2-ExtraBold.ttf" id="12_u1usl"]
+[ext_resource type="Texture2D" uid="uid://cgx0kqpevfgqr" path="res://assets/fourthScene/board.png" id="13_00nn3"]
+[ext_resource type="FontFile" uid="uid://d3sehhhvmoeq4" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="14_00nn3"]
+[ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="18_bay0x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v8qb6"]
+line_spacing = 0.0
+font = ExtResource("12_u1usl")
+font_size = 84
+font_color = Color(0.3647059, 0.14117648, 0.08627451, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_00nn3"]
+line_spacing = 0.0
+font = ExtResource("12_u1usl")
+font_size = 84
+font_color = Color(0.3647059, 0.14117648, 0.08627451, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bvtv"]
+font = ExtResource("12_u1usl")
+font_size = 74
+font_color = Color(0.88235295, 0.24705882, 0.078431375, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1usl"]
+font = ExtResource("12_u1usl")
+font_size = 200
+font_color = Color(0.88235295, 0.24705882, 0.078431375, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_oklu1"]
+font = ExtResource("14_00nn3")
+font_size = 54
+font_color = Color(0.3647059, 0.14117648, 0.08627451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d0b1t"]
+font = ExtResource("14_00nn3")
+font_size = 54
+font_color = Color(1, 0.3882353, 0, 1)
+outline_size = 8
+outline_color = Color(0.3647059, 0.14117648, 0.08627451, 1)
+shadow_size = 23
+shadow_color = Color(1, 0.3882353, 0, 1)
+shadow_offset = Vector2(4, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vw84y"]
+font = ExtResource("12_u1usl")
+font_size = 48
+font_color = Color(0.3647059, 0.14117648, 0.08627451, 1)
+outline_size = 16
+
+[node name="startScene" type="Node2D" unique_id=126096920]
+script = ExtResource("1_qf8ob")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=151492716]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=456784953]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ckk4e")
+
+[node name="KaliaCharacter" type="TextureRect" parent="UI" unique_id=621223494]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -649.0
+offset_top = -540.0
+offset_right = -289.0
+offset_bottom = -88.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_kqmaa")
+
+[node name="ChutkiCharacter" type="TextureRect" parent="UI" unique_id=819559763]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = 6.0
+offset_right = -60.0
+offset_bottom = 458.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_qf8ob")
+
+[node name="BheemCharacter" type="TextureRect" parent="UI" unique_id=503489856]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = -123.0
+offset_right = 660.0
+offset_bottom = 466.0
+grow_vertical = 2
+texture = ExtResource("4_u1usl")
+
+[node name="GroundSide" type="TextureRect" parent="UI" unique_id=1017730551]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -538.0
+offset_top = -236.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_sm5u0")
+
+[node name="FlowerSideGround" type="TextureRect" parent="UI" unique_id=832385982]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -216.0
+offset_right = 399.0
+grow_vertical = 0
+texture = ExtResource("3_d0wjd")
+
+[node name="SoundButton" type="TextureButton" parent="UI" unique_id=938990812]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -202.0
+offset_top = 2.0
+offset_right = -81.0
+offset_bottom = 142.0
+grow_horizontal = 0
+toggle_mode = true
+texture_normal = ExtResource("4_kqmaa")
+texture_pressed = ExtResource("9_d0b1t")
+
+[node name="LogoBoard" type="TextureRect" parent="UI" unique_id=275547098]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -329.0
+offset_top = -19.0
+offset_right = 329.0
+offset_bottom = 452.0
+grow_horizontal = 2
+texture = ExtResource("5_qf8ob")
+
+[node name="ButterFlyOne" type="TextureRect" parent="UI/LogoBoard" unique_id=1304032792]
+layout_mode = 1
+offset_left = -43.0
+offset_top = 33.0
+offset_right = 58.0
+offset_bottom = 132.0
+texture = ExtResource("6_u1usl")
+
+[node name="ButterFlyTwo" type="TextureRect" parent="UI/LogoBoard" unique_id=293283093]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -37.5
+offset_right = 51.0
+offset_bottom = 61.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("7_00nn3")
+
+[node name="title" type="Label" parent="UI/LogoBoard" unique_id=1134499584]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -119.5
+offset_right = 206.0
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.05235988
+text = "Let's learn"
+label_settings = SubResource("LabelSettings_v8qb6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title4" type="Label" parent="UI/LogoBoard" unique_id=181255088]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -179.0
+offset_right = 47.5542
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -0.05235988
+text = "today"
+label_settings = SubResource("LabelSettings_00nn3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title2" type="Label" parent="UI/LogoBoard" unique_id=1154204082]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -6.5
+offset_right = 48.0
+offset_bottom = 112.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.06981317
+text = "number"
+label_settings = SubResource("LabelSettings_7bvtv")
+
+[node name="title3" type="Label" parent="UI/LogoBoard" unique_id=1822125426]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = -107.5
+offset_right = 206.0
+offset_bottom = 213.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 74
+text = "2"
+label_settings = SubResource("LabelSettings_u1usl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LogoBoardTwo" type="TextureRect" parent="UI" unique_id=1164425799]
+offset_left = 93.0
+offset_top = 150.0
+offset_right = 435.0
+offset_bottom = 347.0
+rotation = -0.19401388
+texture = ExtResource("13_00nn3")
+
+[node name="Chhota" type="Label" parent="UI/LogoBoardTwo" unique_id=121003012]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.79799
+offset_top = -36.537796
+offset_right = 80.20201
+offset_bottom = 18.462204
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.06981317
+text = "Chhota"
+label_settings = SubResource("LabelSettings_oklu1")
+
+[node name="Bheem" type="Label" parent="UI/LogoBoardTwo" unique_id=1955947554]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.75171
+offset_top = 16.748459
+offset_right = 83.24829
+offset_bottom = 71.74846
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.05235988
+text = "BHEEM"
+label_settings = SubResource("LabelSettings_d0b1t")
+
+[node name="PlayButtonBackground" type="TextureRect" parent="UI" unique_id=1661266611]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -428.0
+offset_right = 288.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("9_bay0x")
+
+[node name="PlayIcon" type="TextureButton" parent="UI/PlayButtonBackground" unique_id=484600030]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -394.0
+offset_right = 131.0
+offset_bottom = -177.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("10_plg0x")
+
+[node name="Label" type="Label" parent="UI/PlayButtonBackground" unique_id=608818371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = 7.5
+offset_right = 180.0
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tap to Start"
+label_settings = SubResource("LabelSettings_vw84y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=1582078377]
+stream = ExtResource("18_bay0x")
+
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UI/PlayButtonBackground/PlayIcon" to="." method="_on_play_icon_pressed"]

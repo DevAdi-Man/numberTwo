@@ -1,0 +1,274 @@
+[gd_scene format=3 uid="uid://4jfbgxxqc4ie"]
+
+[ext_resource type="Script" uid="uid://c70n2knr51apk" path="res://scene/play_scene_two.gd" id="1_gmsub"]
+[ext_resource type="Texture2D" uid="uid://bls5wjxsmh5wv" path="res://assets/thirdScene/BackGround.png" id="2_1bic2"]
+[ext_resource type="Texture2D" uid="uid://cyart8jvpxg4i" path="res://assets/thirdScene/poat.png" id="3_6l2tw"]
+[ext_resource type="Texture2D" uid="uid://by4jiu2ltjdxp" path="res://assets/thirdScene/rightGroundFlower.png" id="4_wxiel"]
+[ext_resource type="Texture2D" uid="uid://bipn2nb3kvi0s" path="res://assets/start/soundButton.png" id="5_e6jyt"]
+[ext_resource type="Texture2D" uid="uid://ctebw27q07v7q" path="res://assets/start/HomeButton.png" id="6_4g4bn"]
+[ext_resource type="Texture2D" uid="uid://dp61nlpjsiw27" path="res://assets/secondScene/sQuestionBanner.png" id="7_6vb55"]
+[ext_resource type="FontFile" uid="uid://cq6ab0geti2pr" path="res://assets/fonts/Baloo2-ExtraBold.ttf" id="8_dqss0"]
+[ext_resource type="Texture2D" uid="uid://bpkr320pmutwf" path="res://assets/thirdScene/characterBheem.png" id="9_1rn4f"]
+[ext_resource type="Texture2D" uid="uid://2yt6shogmklx" path="res://assets/thirdScene/plate.png" id="10_titn7"]
+[ext_resource type="Texture2D" uid="uid://bbf8kx1kh864g" path="res://assets/thirdScene/laddoos.png" id="11_0pa6r"]
+[ext_resource type="Texture2D" uid="uid://jervjo2bpnwh" path="res://assets/thirdScene/laddoosBoard.png" id="12_38rpu"]
+[ext_resource type="Texture2D" uid="uid://drb8nn6bnklo6" path="res://assets/muteIcon.png" id="12_dqss0"]
+[ext_resource type="AudioStream" uid="uid://cm0j2hahenxue" path="res://assets/Howmanyladdoos.mp3" id="13_4g4bn"]
+[ext_resource type="AudioStream" uid="uid://cbkuluqyt0667" path="res://assets/isBheemholding.mp3" id="14_6vb55"]
+[ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="15_dqss0"]
+[ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="16_1rn4f"]
+[ext_resource type="AudioStream" uid="uid://byswgpp3lwvu3" path="res://assets/levelCompleted.mp3" id="17_titn7"]
+[ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="18_6vb55"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ho6cm"]
+font = ExtResource("8_dqss0")
+font_size = 84
+font_color = Color(0.32156864, 0.10980392, 0.050980393, 1)
+outline_size = 16
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ho6cm"]
+load_path = "res://.godot/imported/laddoos.png-814fdca17c3422575d7729c8d7cd80e3.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_v8qb6"]
+line_spacing = 0.0
+font_size = 34
+font_color = Color(0.32156864, 0.10980392, 0.050980393, 1)
+outline_size = 16
+
+[node name="play_scene_two" type="Node2D" unique_id=1829195928]
+script = ExtResource("1_gmsub")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=699922169]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=1716211759]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1bic2")
+
+[node name="GroundPoat" type="TextureRect" parent="UI/Background" unique_id=693705356]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -275.80005
+offset_right = 306.6
+grow_vertical = 0
+texture = ExtResource("3_6l2tw")
+
+[node name="GroundFlower" type="TextureRect" parent="UI/Background" unique_id=868589140]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -379.0
+offset_top = -216.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_wxiel")
+
+[node name="QuestionBanner" type="TextureRect" parent="UI" unique_id=686862779]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 320.0
+grow_horizontal = 2
+texture = ExtResource("7_6vb55")
+
+[node name="Question" type="Label" parent="UI/QuestionBanner" unique_id=402687870]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.5
+offset_top = -110.0
+offset_right = 336.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "How many laddoos"
+label_settings = SubResource("LabelSettings_ho6cm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Question2" type="Label" parent="UI/QuestionBanner" unique_id=94578043]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -367.0
+offset_top = -24.0
+offset_right = 392.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "is Bheem holding"
+label_settings = SubResource("LabelSettings_ho6cm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BheemCharacter" type="TextureRect" parent="UI" unique_id=471465562]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -549.0
+offset_top = -160.0
+offset_right = 69.0
+offset_bottom = 410.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_1rn4f")
+
+[node name="Plate" type="TextureRect" parent="UI" unique_id=1102130218]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 73.0
+offset_top = -242.0
+offset_right = 492.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("10_titn7")
+
+[node name="LaddooOneAppear" type="TextureRect" parent="UI/Plate" unique_id=291886831]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = -24.0
+offset_right = 23.5
+offset_bottom = 114.0
+grow_horizontal = 2
+texture = ExtResource("11_0pa6r")
+
+[node name="LaddooTwoAppear" type="TextureRect" parent="UI/Plate" unique_id=1364532094]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 13.5
+offset_top = -30.0
+offset_right = 154.5
+offset_bottom = 108.0
+grow_horizontal = 2
+texture = SubResource("CompressedTexture2D_ho6cm")
+
+[node name="DragBoardLaddoo" type="TextureRect" parent="UI" unique_id=600720344]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -489.0
+offset_top = -196.0
+offset_right = -90.0
+offset_bottom = 197.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("12_38rpu")
+
+[node name="laddoQuestionText" type="Label" parent="UI/DragBoardLaddoo" unique_id=1298478173]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -156.5
+offset_top = 19.0
+offset_right = 156.5
+offset_bottom = 128.0
+grow_horizontal = 2
+text = "Tap the laddoos
+ to Bheem!"
+label_settings = SubResource("LabelSettings_v8qb6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LaddooOne" type="TextureButton" parent="UI/DragBoardLaddoo" unique_id=812765976]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 58.0
+offset_top = -21.5
+offset_right = 199.0
+offset_bottom = 116.5
+grow_vertical = 2
+texture_normal = ExtResource("11_0pa6r")
+
+[node name="LaddooTwo" type="TextureButton" parent="UI/DragBoardLaddoo" unique_id=1637738127]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -26.5
+offset_right = -32.0
+offset_bottom = 111.5
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("11_0pa6r")
+
+[node name="SoundButton" type="TextureButton" parent="UI" unique_id=763017586]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -236.0
+offset_right = -90.80005
+offset_bottom = 165.6
+grow_horizontal = 0
+toggle_mode = true
+texture_normal = ExtResource("5_e6jyt")
+texture_pressed = ExtResource("12_dqss0")
+
+[node name="HomeButton" type="TextureButton" parent="UI" unique_id=1970449567]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -407.0
+offset_right = -239.0
+offset_bottom = 165.6
+grow_horizontal = 0
+texture_normal = ExtResource("6_4g4bn")
+
+[node name="QuestionOneSound" type="AudioStreamPlayer" parent="." unique_id=415868641]
+stream = ExtResource("13_4g4bn")
+
+[node name="QuestionTwoSound" type="AudioStreamPlayer" parent="." unique_id=2992474]
+stream = ExtResource("14_6vb55")
+
+[node name="WrongAnswer" type="AudioStreamPlayer" parent="." unique_id=301137349]
+stream = ExtResource("15_dqss0")
+
+[node name="CorrectAnswer" type="AudioStreamPlayer" parent="." unique_id=443511813]
+stream = ExtResource("16_1rn4f")
+
+[node name="LevelCompleted" type="AudioStreamPlayer" parent="." unique_id=929702262]
+stream = ExtResource("17_titn7")
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=1192798369]
+stream = ExtResource("18_6vb55")
+
+[connection signal="pressed" from="UI/DragBoardLaddoo/LaddooOne" to="." method="_on_laddoo_one_pressed"]
+[connection signal="pressed" from="UI/DragBoardLaddoo/LaddooTwo" to="." method="_on_laddoo_two_pressed"]
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]

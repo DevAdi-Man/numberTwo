@@ -1,0 +1,293 @@
+[gd_scene format=3 uid="uid://cuolj8d4j3gl8"]
+
+[ext_resource type="Script" uid="uid://c0ytss008o7s0" path="res://scene/play_scene_three.gd" id="1_u6754"]
+[ext_resource type="Texture2D" uid="uid://diw8pml8kt18a" path="res://assets/fourthScene/Fbackground.png" id="2_22t57"]
+[ext_resource type="Texture2D" uid="uid://ci3q8ore1rlea" path="res://assets/fourthScene/FgroundFlowers.png" id="2_kso4j"]
+[ext_resource type="Texture2D" uid="uid://saihichhsr0r" path="res://assets/fourthScene/chhotaBheemAndGaggu.png" id="3_b2wxo"]
+[ext_resource type="Texture2D" uid="uid://bl358mh2j4ioo" path="res://assets/fourthScene/port.png" id="3_ehxfc"]
+[ext_resource type="Texture2D" uid="uid://ddp15xhy8xt63" path="res://assets/fourthScene/Fground1.png" id="3_pui7d"]
+[ext_resource type="Texture2D" uid="uid://bwtmjgll2m16p" path="res://assets/fourthScene/butterfly.png" id="4_pui7d"]
+[ext_resource type="Texture2D" uid="uid://bipn2nb3kvi0s" path="res://assets/start/soundButton.png" id="4_xkpj8"]
+[ext_resource type="Texture2D" uid="uid://dsmxpptf3n2ai" path="res://assets/fourthScene/butterflyOne.png" id="5_b2wxo"]
+[ext_resource type="Texture2D" uid="uid://ctebw27q07v7q" path="res://assets/start/HomeButton.png" id="5_essbf"]
+[ext_resource type="Texture2D" uid="uid://dp61nlpjsiw27" path="res://assets/secondScene/sQuestionBanner.png" id="6_22t57"]
+[ext_resource type="FontFile" uid="uid://cq6ab0geti2pr" path="res://assets/fonts/Baloo2-ExtraBold.ttf" id="7_ehxfc"]
+[ext_resource type="Texture2D" uid="uid://qm20j020lxi2" path="res://assets/fourthScene/numberbackground.png" id="11_ho6cm"]
+[ext_resource type="Texture2D" uid="uid://drb8nn6bnklo6" path="res://assets/muteIcon.png" id="13_mtdjm"]
+[ext_resource type="AudioStream" uid="uid://s617rdxaha7q" path="res://assets/TaptheButterFly.mp3" id="14_rodly"]
+[ext_resource type="AudioStream" uid="uid://ckwu076ewehxa" path="res://assets/toCount.mp3" id="15_o17gg"]
+[ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="16_qdkcb"]
+[ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="17_t8liq"]
+[ext_resource type="AudioStream" uid="uid://byswgpp3lwvu3" path="res://assets/levelCompleted.mp3" id="18_mtdjm"]
+[ext_resource type="AudioStream" uid="uid://dd0xklxqea3hs" path="res://assets/One.mp3" id="19_qdkcb"]
+[ext_resource type="AudioStream" uid="uid://52e4wg5pg2am" path="res://assets/Two.mp3" id="20_t8liq"]
+[ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="21_t8liq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_essbf"]
+font = ExtResource("7_ehxfc")
+font_size = 84
+font_color = Color(0.32156864, 0.10980392, 0.050980393, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_v8qb6"]
+font = ExtResource("7_ehxfc")
+font_size = 78
+font_color = Color(1, 0.40784314, 0, 1)
+outline_size = 8
+outline_color = Color(0.32156864, 0.10980392, 0.050980393, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ho6cm"]
+load_path = "res://.godot/imported/numberbackground.png-03b3a4ce0492761b8e8829634d169106.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bvtv"]
+font = ExtResource("7_ehxfc")
+font_size = 78
+font_color = Color(0.54901963, 0.32156864, 1, 1)
+outline_size = 8
+outline_color = Color(0.32156864, 0.10980392, 0.050980393, 1)
+
+[node name="PlaySceneThree" type="Node2D" unique_id=800964736]
+script = ExtResource("1_u6754")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=787493587]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=2040318627]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_22t57")
+
+[node name="Port" type="TextureRect" parent="UI/Background" unique_id=200166513]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = -368.0
+offset_right = -22.0
+offset_bottom = -191.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_ehxfc")
+
+[node name="GroundFlowerRight" type="TextureRect" parent="UI/Background" unique_id=347999805]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -578.0
+offset_top = -275.80005
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_pui7d")
+
+[node name="Characters" type="TextureRect" parent="UI" unique_id=684885957]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -630.0
+offset_right = 617.0
+offset_bottom = -41.0
+grow_vertical = 0
+texture = ExtResource("3_b2wxo")
+
+[node name="GroundFlowerLeft" type="TextureRect" parent="UI" unique_id=1328156152]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -225.0
+offset_right = 591.0
+grow_vertical = 0
+texture = ExtResource("2_kso4j")
+
+[node name="ButterFlyTwo" type="TextureButton" parent="UI" unique_id=1510156184]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 33.0
+offset_top = -164.0
+offset_right = 292.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_pui7d")
+
+[node name="ButterFlyOne" type="TextureButton" parent="UI" unique_id=482729727]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -289.0
+offset_top = -164.0
+offset_right = -29.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_b2wxo")
+
+[node name="QuestionBanner" type="TextureRect" parent="UI" unique_id=731139172]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 320.0
+grow_horizontal = 2
+texture = ExtResource("6_22t57")
+
+[node name="Question" type="Label" parent="UI/QuestionBanner" unique_id=1972466658]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.5
+offset_top = -110.0
+offset_right = 336.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tap the ButterFly"
+label_settings = SubResource("LabelSettings_essbf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Question2" type="Label" parent="UI/QuestionBanner" unique_id=1112443861]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -367.0
+offset_top = -24.0
+offset_right = 392.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "To count!"
+label_settings = SubResource("LabelSettings_essbf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOneBackground" type="TextureRect" parent="UI" unique_id=596182791]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = 109.0
+offset_right = -105.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ho6cm")
+
+[node name="One" type="Label" parent="UI/NumberOneBackground" unique_id=1895133959]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55
+anchor_top = 0.48600003
+anchor_right = 0.55
+anchor_bottom = 0.48600003
+offset_left = -14.0
+offset_top = -64.068
+offset_right = 26.0
+offset_bottom = 61.932
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+label_settings = SubResource("LabelSettings_v8qb6")
+
+[node name="NumberTwoBackground" type="TextureRect" parent="UI" unique_id=1516580206]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = 104.0
+offset_right = 220.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_ho6cm")
+
+[node name="Two" type="Label" parent="UI/NumberTwoBackground" unique_id=1735651068]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57100004
+anchor_top = 0.5
+anchor_right = 0.57100004
+anchor_bottom = 0.5
+offset_left = -20.520004
+offset_top = -64.0
+offset_right = 20.479996
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2"
+label_settings = SubResource("LabelSettings_7bvtv")
+
+[node name="SoundButton" type="TextureButton" parent="UI" unique_id=712581599]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -236.0
+offset_right = -90.80005
+offset_bottom = 165.6
+grow_horizontal = 0
+toggle_mode = true
+texture_normal = ExtResource("4_xkpj8")
+texture_pressed = ExtResource("13_mtdjm")
+
+[node name="HomeButton" type="TextureButton" parent="UI" unique_id=1271596928]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -407.0
+offset_right = -239.0
+offset_bottom = 165.6
+grow_horizontal = 0
+texture_normal = ExtResource("5_essbf")
+
+[node name="QuestionOneSound" type="AudioStreamPlayer" parent="." unique_id=357290557]
+stream = ExtResource("14_rodly")
+
+[node name="QuestionTwoSound" type="AudioStreamPlayer" parent="." unique_id=566209664]
+stream = ExtResource("15_o17gg")
+
+[node name="WrongAnswer" type="AudioStreamPlayer" parent="." unique_id=88949937]
+stream = ExtResource("16_qdkcb")
+
+[node name="CorrectAnswer" type="AudioStreamPlayer" parent="." unique_id=1167522861]
+stream = ExtResource("17_t8liq")
+
+[node name="LevelCompleted" type="AudioStreamPlayer" parent="." unique_id=440650451]
+stream = ExtResource("18_mtdjm")
+
+[node name="One" type="AudioStreamPlayer" parent="." unique_id=1408065329]
+stream = ExtResource("19_qdkcb")
+
+[node name="Two" type="AudioStreamPlayer" parent="." unique_id=340848005]
+stream = ExtResource("20_t8liq")
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=110647777]
+stream = ExtResource("21_t8liq")
+
+[connection signal="pressed" from="UI/ButterFlyTwo" to="." method="_on_butter_fly_two_pressed"]
+[connection signal="pressed" from="UI/ButterFlyOne" to="." method="_on_butter_fly_one_pressed"]
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]

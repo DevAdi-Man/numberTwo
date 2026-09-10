@@ -1,0 +1,310 @@
+[gd_scene format=3 uid="uid://bvpjbe8aiu8et"]
+
+[ext_resource type="Texture2D" uid="uid://ch2nidbyy6xao" path="res://assets/secondScene/background.png" id="1_d4ex1"]
+[ext_resource type="Script" uid="uid://vus7hj14cujs" path="res://scene/play_scene_one.gd" id="1_lfto4"]
+[ext_resource type="Texture2D" uid="uid://jks800loxes6" path="res://assets/secondScene/CharacterBheem.png" id="2_xk81u"]
+[ext_resource type="Texture2D" uid="uid://d3ykyaup80tbt" path="res://assets/secondScene/CharacterGaggu.png" id="3_5laa6"]
+[ext_resource type="Texture2D" uid="uid://dyy1s27vjs0u" path="res://assets/secondScene/groundGrass.png" id="4_7e6j7"]
+[ext_resource type="Texture2D" uid="uid://dp61nlpjsiw27" path="res://assets/secondScene/sQuestionBanner.png" id="5_qemwf"]
+[ext_resource type="Texture2D" uid="uid://bipn2nb3kvi0s" path="res://assets/start/soundButton.png" id="6_lfto4"]
+[ext_resource type="Texture2D" uid="uid://ctebw27q07v7q" path="res://assets/start/HomeButton.png" id="7_01g60"]
+[ext_resource type="FontFile" uid="uid://cq6ab0geti2pr" path="res://assets/fonts/Baloo2-ExtraBold.ttf" id="7_sx80d"]
+[ext_resource type="Texture2D" uid="uid://ieyhv7bex154" path="res://assets/secondScene/guessBoard.png" id="8_qemwf"]
+[ext_resource type="Texture2D" uid="uid://drb8nn6bnklo6" path="res://assets/muteIcon.png" id="9_hyhv2"]
+[ext_resource type="Texture2D" uid="uid://dukscuqe08o6r" path="res://assets/secondScene/Shocks.png" id="9_lfto4"]
+[ext_resource type="Texture2D" uid="uid://csclfsomvicgj" path="res://assets/secondScene/Shoes.png" id="10_01g60"]
+[ext_resource type="Texture2D" uid="uid://d0t2i86ebps1g" path="res://assets/secondScene/apples.png" id="11_sx80d"]
+[ext_resource type="AudioStream" uid="uid://5xtqq43ytgnm" path="res://assets/MatchthePairs!.mp3" id="14_d3wfn"]
+[ext_resource type="AudioStream" uid="uid://dy1qpofn5qycr" path="res://assets/Taptwoitemsthatgotogether!.mp3" id="15_kethk"]
+[ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="16_kethk"]
+[ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="17_6ayjj"]
+[ext_resource type="AudioStream" uid="uid://byswgpp3lwvu3" path="res://assets/levelCompleted.mp3" id="18_l1ms8"]
+[ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="19_dv4kn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sx80d"]
+load_path = "res://.godot/imported/groundGrasstwo.png-e8b22e74b2147a683dfd4bd1296cc007.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_00nn3"]
+font = ExtResource("7_sx80d")
+font_size = 88
+font_color = Color(0.32156864, 0.10980392, 0.050980393, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_v8qb6"]
+font = ExtResource("7_sx80d")
+font_size = 48
+font_color = Color(0.32156864, 0.10980392, 0.050980393, 1)
+
+[node name="PlaySceneOne" type="Node2D" unique_id=2136629080]
+script = ExtResource("1_lfto4")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2136423089]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=677140860]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d4ex1")
+
+[node name="CharacterBheem" type="TextureRect" parent="UI" unique_id=1903756925]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -593.0
+offset_right = 401.0
+offset_bottom = -43.0
+grow_vertical = 0
+texture = ExtResource("2_xk81u")
+
+[node name="CharacterGaguu" type="TextureRect" parent="UI" unique_id=1087067583]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -415.0
+offset_top = -474.0
+offset_right = -51.0
+offset_bottom = -64.5
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_5laa6")
+
+[node name="SideGroundFlower" type="TextureRect" parent="UI" unique_id=1973323692]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -177.0
+offset_right = 697.0
+grow_vertical = 0
+texture = ExtResource("4_7e6j7")
+
+[node name="SideGroundFlower2" type="TextureRect" parent="UI" unique_id=1558122453]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -578.0
+offset_top = -236.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = SubResource("CompressedTexture2D_sx80d")
+
+[node name="QuestionBanner" type="TextureRect" parent="UI" unique_id=1411959046]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 320.0
+grow_horizontal = 2
+texture = ExtResource("5_qemwf")
+
+[node name="Question" type="Label" parent="UI/QuestionBanner" unique_id=232551501]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.5
+offset_top = -110.0
+offset_right = 336.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Match the Pairs!"
+label_settings = SubResource("LabelSettings_00nn3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestionGesture" type="Label" parent="UI/QuestionBanner" unique_id=2126107076]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.0
+offset_top = -8.0
+offset_right = 360.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tap two items that go together!"
+label_settings = SubResource("LabelSettings_v8qb6")
+
+[node name="SoundButton" type="TextureButton" parent="UI" unique_id=1062632718]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -236.0
+offset_right = -90.80005
+offset_bottom = 165.6
+grow_horizontal = 0
+toggle_mode = true
+texture_normal = ExtResource("6_lfto4")
+texture_pressed = ExtResource("9_hyhv2")
+
+[node name="HomeButton" type="TextureButton" parent="UI" unique_id=686716427]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -407.0
+offset_right = -239.0
+offset_bottom = 165.6
+grow_horizontal = 0
+texture_normal = ExtResource("7_01g60")
+
+[node name="GridContainer" type="GridContainer" parent="UI" unique_id=1097508492]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -394.0
+offset_top = -92.0
+offset_right = 394.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="TabButton1" type="TextureButton" parent="UI/GridContainer" unique_id=1045566551]
+layout_mode = 2
+texture_normal = ExtResource("8_qemwf")
+
+[node name="Shocks" type="TextureRect" parent="UI/GridContainer/TabButton1" unique_id=1425630094]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -98.5
+offset_right = 80.0
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_lfto4")
+
+[node name="TabButton2" type="TextureButton" parent="UI/GridContainer" unique_id=155552994]
+layout_mode = 2
+texture_normal = ExtResource("8_qemwf")
+
+[node name="Shoes" type="TextureRect" parent="UI/GridContainer/TabButton2" unique_id=1030019635]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -98.5
+offset_right = 100.0
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_01g60")
+
+[node name="TabButton3" type="TextureButton" parent="UI/GridContainer" unique_id=560334590]
+layout_mode = 2
+texture_normal = ExtResource("8_qemwf")
+
+[node name="Apple" type="TextureRect" parent="UI/GridContainer/TabButton3" unique_id=1673906149]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -98.5
+offset_right = 90.0
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_sx80d")
+
+[node name="TabButton4" type="TextureButton" parent="UI/GridContainer" unique_id=1998051974]
+layout_mode = 2
+texture_normal = ExtResource("8_qemwf")
+
+[node name="Shoes" type="TextureRect" parent="UI/GridContainer/TabButton4" unique_id=1999812889]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -97.5
+offset_right = 100.0
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_01g60")
+
+[node name="TabButton5" type="TextureButton" parent="UI/GridContainer" unique_id=540621833]
+layout_mode = 2
+texture_normal = ExtResource("8_qemwf")
+
+[node name="Apple" type="TextureRect" parent="UI/GridContainer/TabButton5" unique_id=1129095307]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -98.5
+offset_right = 90.0
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_sx80d")
+
+[node name="TabButton6" type="TextureButton" parent="UI/GridContainer" unique_id=1704384094]
+layout_mode = 2
+texture_normal = ExtResource("8_qemwf")
+
+[node name="Shocks" type="TextureRect" parent="UI/GridContainer/TabButton6" unique_id=560590083]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -98.5
+offset_right = 80.0
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_lfto4")
+
+[node name="QuestionOneSound" type="AudioStreamPlayer" parent="." unique_id=816787493]
+stream = ExtResource("14_d3wfn")
+
+[node name="QuestionTwoSound" type="AudioStreamPlayer" parent="." unique_id=1953051213]
+stream = ExtResource("15_kethk")
+
+[node name="WrongAnswer" type="AudioStreamPlayer" parent="." unique_id=2050047337]
+stream = ExtResource("16_kethk")
+
+[node name="CorrectAnswer" type="AudioStreamPlayer" parent="." unique_id=541617042]
+stream = ExtResource("17_6ayjj")
+
+[node name="LevelCompleted" type="AudioStreamPlayer" parent="." unique_id=65949290]
+stream = ExtResource("18_l1ms8")
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=1038025805]
+stream = ExtResource("19_dv4kn")
+
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
