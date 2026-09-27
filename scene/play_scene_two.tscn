@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cyart8jvpxg4i" path="res://assets/thirdScene/poat.png" id="3_6l2tw"]
 [ext_resource type="Texture2D" uid="uid://by4jiu2ltjdxp" path="res://assets/thirdScene/rightGroundFlower.png" id="4_wxiel"]
 [ext_resource type="Texture2D" uid="uid://bipn2nb3kvi0s" path="res://assets/start/soundButton.png" id="5_e6jyt"]
-[ext_resource type="Texture2D" uid="uid://ctebw27q07v7q" path="res://assets/start/HomeButton.png" id="6_4g4bn"]
 [ext_resource type="Texture2D" uid="uid://dp61nlpjsiw27" path="res://assets/secondScene/sQuestionBanner.png" id="7_6vb55"]
 [ext_resource type="FontFile" uid="uid://cq6ab0geti2pr" path="res://assets/fonts/Baloo2-ExtraBold.ttf" id="8_dqss0"]
 [ext_resource type="Texture2D" uid="uid://bpkr320pmutwf" path="res://assets/thirdScene/characterBheem.png" id="9_1rn4f"]
@@ -13,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://bbf8kx1kh864g" path="res://assets/thirdScene/laddoos.png" id="11_0pa6r"]
 [ext_resource type="Texture2D" uid="uid://jervjo2bpnwh" path="res://assets/thirdScene/laddoosBoard.png" id="12_38rpu"]
 [ext_resource type="Texture2D" uid="uid://drb8nn6bnklo6" path="res://assets/muteIcon.png" id="12_dqss0"]
+[ext_resource type="Texture2D" uid="uid://dd0mjjuapmnjy" path="res://assets/UI/backButon.png" id="13_1rn4f"]
 [ext_resource type="AudioStream" uid="uid://cm0j2hahenxue" path="res://assets/Howmanyladdoos.mp3" id="13_4g4bn"]
+[ext_resource type="Texture2D" uid="uid://bm0vho4mos6aj" path="res://assets/UI/nextButtonh.png" id="14_1rn4f"]
 [ext_resource type="AudioStream" uid="uid://cbkuluqyt0667" path="res://assets/isBheemholding.mp3" id="14_6vb55"]
 [ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="15_dqss0"]
 [ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="16_1rn4f"]
@@ -240,15 +241,30 @@ toggle_mode = true
 texture_normal = ExtResource("5_e6jyt")
 texture_pressed = ExtResource("12_dqss0")
 
-[node name="HomeButton" type="TextureButton" parent="UI" unique_id=1970449567]
-anchors_preset = 1
+[node name="BackButton" type="TextureButton" parent="UI" unique_id=1970449567]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 200.0
+offset_bottom = 200.0
+texture_normal = ExtResource("13_1rn4f")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="NextButton" type="TextureButton" parent="UI" unique_id=2081589448]
+custom_minimum_size = Vector2(190, 190)
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
-offset_left = -407.0
-offset_right = -239.0
-offset_bottom = 165.6
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -209.0
+offset_right = -70.0
+offset_bottom = -19.0
 grow_horizontal = 0
-texture_normal = ExtResource("6_4g4bn")
+grow_vertical = 0
+texture_normal = ExtResource("14_1rn4f")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="QuestionOneSound" type="AudioStreamPlayer" parent="." unique_id=415868641]
 stream = ExtResource("13_4g4bn")
@@ -271,4 +287,5 @@ stream = ExtResource("18_6vb55")
 [connection signal="pressed" from="UI/DragBoardLaddoo/LaddooOne" to="." method="_on_laddoo_one_pressed"]
 [connection signal="pressed" from="UI/DragBoardLaddoo/LaddooTwo" to="." method="_on_laddoo_two_pressed"]
 [connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
-[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/BackButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/NextButton" to="." method="_on_next_button_pressed"]

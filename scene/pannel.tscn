@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://ktg07uqkcj53"]
+
+[ext_resource type="Script" uid="uid://4x851l06bhdr" path="res://scene/pannel.gd" id="1_dm014"]
+[ext_resource type="Texture2D" uid="uid://bbnkitsc75hh5" path="res://assets/UI/Home.png" id="2_irs3y"]
+[ext_resource type="Texture2D" uid="uid://dmudt55lja4sr" path="res://assets/thirdScreen/laddoo.png" id="3_irs3y"]
+[ext_resource type="Texture2D" uid="uid://5mu2qx0ue5ky" path="res://assets/UI/replay.png" id="3_mt57l"]
+[ext_resource type="Texture2D" uid="uid://c3t67g8mje06f" path="res://assets/UI/grass.png" id="5_irs3y"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_irs3y"]
+blend_mode = 4
+light_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Theme" id="Theme_mt57l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axtki"]
+bg_color = Color(0.95686275, 0.8666667, 0.654902, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.69803923, 0.39607844, 0.17254902, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+corner_detail = 20
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_irs3y"]
+load_path = "res://.godot/imported/grass.png-ce6a65be35d7b5cd89b7973cc08f98aa.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mt57l"]
+load_path = "res://.godot/imported/grass.png-ce6a65be35d7b5cd89b7973cc08f98aa.ctex"
+
+[node name="Pannel" type="Node2D" unique_id=889966250]
+script = ExtResource("1_dm014")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2080859169]
+
+[node name="PannelBackground" type="Panel" parent="CanvasLayer" unique_id=1156400664]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PannelBackground" unique_id=957994924]
+material = SubResource("CanvasItemMaterial_irs3y")
+custom_minimum_size = Vector2(701, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.5
+offset_top = -300.0
+offset_right = 350.5
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_mt57l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_axtki")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PannelBackground/Panel" unique_id=299770714]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.5
+offset_top = -225.0
+offset_right = -1.5
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="HomeButton" type="TextureButton" parent="CanvasLayer/PannelBackground/Panel/HBoxContainer" unique_id=33239595]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture_normal = ExtResource("2_irs3y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ReplayButton" type="TextureButton" parent="CanvasLayer/PannelBackground/Panel/HBoxContainer" unique_id=1116983316]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+texture_normal = ExtResource("3_mt57l")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Laddoo" type="TextureRect" parent="CanvasLayer/PannelBackground/Panel" unique_id=1511795431]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 81.5
+offset_top = -153.0
+offset_right = 301.5
+offset_bottom = 67.0
+grow_vertical = 2
+texture = ExtResource("3_irs3y")
+
+[node name="Laddoo2" type="TextureRect" parent="CanvasLayer/PannelBackground/Panel" unique_id=1565977503]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -108.0
+offset_top = 2.0
+offset_right = 112.0
+offset_bottom = 222.0
+grow_horizontal = 2
+texture = ExtResource("3_irs3y")
+
+[node name="Laddoo3" type="TextureRect" parent="CanvasLayer/PannelBackground/Panel" unique_id=1269096063]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -301.5
+offset_top = -157.0
+offset_right = -81.5
+offset_bottom = 63.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_irs3y")
+
+[node name="TopLeftGrass" type="TextureRect" parent="CanvasLayer/PannelBackground/Panel" unique_id=205443532]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+offset_left = -143.5
+offset_top = -40.0
+offset_right = 56.5
+offset_bottom = 160.0
+rotation = -0.5665549
+texture = ExtResource("5_irs3y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TopRightGrass" type="TextureRect" parent="CanvasLayer/PannelBackground/Panel" unique_id=1327446131]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -114.5
+offset_top = -110.0
+offset_right = 85.5
+offset_bottom = 90.0
+grow_horizontal = 0
+rotation = 0.4595856
+pivot_offset = Vector2(108.019165, 119.158325)
+texture = SubResource("CompressedTexture2D_irs3y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BottomRightGrass" type="TextureRect" parent="CanvasLayer/PannelBackground/Panel" unique_id=11026095]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -114.5
+offset_top = -138.99994
+offset_right = 85.5
+offset_bottom = 61.00006
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 2.0648234
+pivot_offset = Vector2(108.019165, 119.158325)
+texture = SubResource("CompressedTexture2D_mt57l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BottomLeftGrass" type="TextureRect" parent="CanvasLayer/PannelBackground/Panel" unique_id=1813411950]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -96.5
+offset_top = -139.00006
+offset_right = 103.5
+offset_bottom = 60.99994
+grow_vertical = 0
+rotation = 3.7986913
+pivot_offset = Vector2(108.019165, 119.158325)
+texture = SubResource("CompressedTexture2D_mt57l")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="CanvasLayer/PannelBackground/Panel/HBoxContainer/HomeButton" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="CanvasLayer/PannelBackground/Panel/HBoxContainer/ReplayButton" to="." method="_on_replay_pressed"]

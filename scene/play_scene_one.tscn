@@ -7,14 +7,15 @@
 [ext_resource type="Texture2D" uid="uid://dyy1s27vjs0u" path="res://assets/secondScene/groundGrass.png" id="4_7e6j7"]
 [ext_resource type="Texture2D" uid="uid://dp61nlpjsiw27" path="res://assets/secondScene/sQuestionBanner.png" id="5_qemwf"]
 [ext_resource type="Texture2D" uid="uid://bipn2nb3kvi0s" path="res://assets/start/soundButton.png" id="6_lfto4"]
-[ext_resource type="Texture2D" uid="uid://ctebw27q07v7q" path="res://assets/start/HomeButton.png" id="7_01g60"]
 [ext_resource type="FontFile" uid="uid://cq6ab0geti2pr" path="res://assets/fonts/Baloo2-ExtraBold.ttf" id="7_sx80d"]
 [ext_resource type="Texture2D" uid="uid://ieyhv7bex154" path="res://assets/secondScene/guessBoard.png" id="8_qemwf"]
 [ext_resource type="Texture2D" uid="uid://drb8nn6bnklo6" path="res://assets/muteIcon.png" id="9_hyhv2"]
 [ext_resource type="Texture2D" uid="uid://dukscuqe08o6r" path="res://assets/secondScene/Shocks.png" id="9_lfto4"]
 [ext_resource type="Texture2D" uid="uid://csclfsomvicgj" path="res://assets/secondScene/Shoes.png" id="10_01g60"]
+[ext_resource type="Texture2D" uid="uid://dd0mjjuapmnjy" path="res://assets/UI/backButon.png" id="10_hyhv2"]
 [ext_resource type="Texture2D" uid="uid://d0t2i86ebps1g" path="res://assets/secondScene/apples.png" id="11_sx80d"]
 [ext_resource type="AudioStream" uid="uid://5xtqq43ytgnm" path="res://assets/MatchthePairs!.mp3" id="14_d3wfn"]
+[ext_resource type="Texture2D" uid="uid://bm0vho4mos6aj" path="res://assets/UI/nextButtonh.png" id="15_3cc6s"]
 [ext_resource type="AudioStream" uid="uid://dy1qpofn5qycr" path="res://assets/Taptwoitemsthatgotogether!.mp3" id="15_kethk"]
 [ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="16_kethk"]
 [ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="17_6ayjj"]
@@ -150,15 +151,13 @@ toggle_mode = true
 texture_normal = ExtResource("6_lfto4")
 texture_pressed = ExtResource("9_hyhv2")
 
-[node name="HomeButton" type="TextureButton" parent="UI" unique_id=686716427]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -407.0
-offset_right = -239.0
-offset_bottom = 165.6
-grow_horizontal = 0
-texture_normal = ExtResource("7_01g60")
+[node name="BackButton" type="TextureButton" parent="UI" unique_id=686716427]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 200.0
+offset_bottom = 200.0
+texture_normal = ExtResource("10_hyhv2")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="GridContainer" type="GridContainer" parent="UI" unique_id=1097508492]
 anchors_preset = 8
@@ -288,6 +287,23 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("9_lfto4")
 
+[node name="NextButton" type="TextureButton" parent="UI" unique_id=642752107]
+custom_minimum_size = Vector2(190, 190)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -209.0
+offset_right = -70.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("15_3cc6s")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="QuestionOneSound" type="AudioStreamPlayer" parent="." unique_id=816787493]
 stream = ExtResource("14_d3wfn")
 
@@ -307,4 +323,5 @@ stream = ExtResource("18_l1ms8")
 stream = ExtResource("19_dv4kn")
 
 [connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
-[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/BackButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/NextButton" to="." method="_on_next_button_pressed"]

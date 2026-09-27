@@ -19,8 +19,10 @@ extends Node2D
 @onready var twoSound: AudioStreamPlayer = $Two
 
 @onready var pressed_sound: AudioStreamPlayer = $PressedSound
-@onready var home_button: TextureButton = $UI/HomeButton
+@onready var next_button: TextureButton = $UI/NextButton
+
 @onready var sound_button: TextureButton = $UI/SoundButton
+@onready var back_button: TextureButton = $UI/BackButton
 
 @export var appear_duration_pop: float = 0.25
 @export var appear_duration_settle: float = 0.3
@@ -36,6 +38,7 @@ extends Node2D
 var click_count: int = 0
 
 func _ready() -> void:
+	next_button.visible = false
 	setup_hidden(number_one_background)
 	setup_hidden(number_two_background)
 	setup_hidden(one)
@@ -155,8 +158,7 @@ func on_game_won() -> void:
 		level_completed.play()
 		await level_completed.finished
 
-	get_tree().change_scene_to_file("res://scene/result_scene.tscn")
-
+	next_button.visible = true
 
 func setup_hidden(item: Control) -> void:
 	item.visible = false
@@ -226,7 +228,7 @@ func drop_in_label(label: Label, delay: float = 0.0) -> void:
 
 func _on_home_button_pressed() -> void:
 	pressed_sound.play()
-	MusicManager.splash_icon(home_button)
+	MusicManager.splash_icon(back_button)
 	get_tree().change_scene_to_file("res://scene/start_scene.tscn");
 
 
@@ -235,3 +237,9 @@ func _on_sound_button_pressed() -> void:
 	MusicManager.toggle_music()
 	MusicManager.splash_icon(sound_button)
 	MusicManager.sync_sound_button(sound_button)
+
+
+func _on_next_button_pressed() -> void:
+	pressed_sound.play()
+	MusicManager.splash_icon(next_button)
+	get_tree().change_scene_to_file("res://scene/result_scene.tscn")

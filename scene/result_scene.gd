@@ -1,7 +1,5 @@
 extends Node2D
 
-@onready var text_one: Label = $UI/Board/textOne
-@onready var text_two: Label = $UI/Board/textTwo
 @onready var hurrey_sound: AudioStreamPlayer = $HurreySound
 @onready var now_you_know_the_number_two_sound: AudioStreamPlayer = $NowYouKnowTheNumberTwoSound
 
@@ -11,29 +9,18 @@ extends Node2D
 func _ready() -> void:
 	await get_tree().process_frame
 
-	# HurreySound khatam hone ke baad text_one burst hoga
+	# HurreySound bajega
 	if hurrey_sound.stream:
 		hurrey_sound.play()
 		await hurrey_sound.finished
 
-	await burst_text_chars(text_one, stagger_delay)
-
 	await get_tree().create_timer(word_gap).timeout
 
-	# NowYouKnowTheNumberTwoSound khatam hone ke baad text_two burst hoga
+	# NowYouKnowTheNumberTwoSound bajega
 	if now_you_know_the_number_two_sound.stream:
 		now_you_know_the_number_two_sound.play()
 		await now_you_know_the_number_two_sound.finished
 
-	await burst_text_chars(text_two, stagger_delay)
-
-
-func _on_home_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scene/start_scene.tscn")
-
-
-func _on_reset_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scene/play_scene_one.tscn")
 
 
 # ---------------------------------------------------------

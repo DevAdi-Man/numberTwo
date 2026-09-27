@@ -13,7 +13,9 @@ extends Node2D
 @onready var level_completed: AudioStreamPlayer = $LevelCompleted
 @onready var pressed_sound: AudioStreamPlayer = $PressedSound
 @onready var sound_button: TextureButton = $UI/SoundButton
-@onready var home_button: TextureButton = $UI/HomeButton
+
+@onready var next_button: TextureButton = $UI/NextButton
+@onready var back_button: TextureButton = $UI/BackButton
 
 @export var appear_duration_pop: float = 0.25
 @export var appear_duration_settle: float = 0.3
@@ -29,6 +31,8 @@ var laddoo_two_picked: bool = false
 
 
 func _ready() -> void:
+	next_button.visible = false
+	
 	laddoo_one_appear.visible = false
 	laddoo_one_appear.modulate.a = 0.0
 	laddoo_one_appear.scale = Vector2.ZERO
@@ -119,8 +123,7 @@ func _on_laddoo_one_pressed() -> void:
 	if correct_answer.stream:
 		correct_answer.play()
 
-	disappear_item(laddoo_one)
-	appear_item(laddoo_one_appear)
+	await move_and_appear(laddoo_one, laddoo_one_appear)
 
 	await check_level_complete()
 
@@ -136,15 +139,39 @@ func _on_laddoo_two_pressed() -> void:
 	if correct_answer.stream:
 		correct_answer.play()
 
-	disappear_item(laddoo_two)
-	appear_item(laddoo_two_appear)
+	await move_and_appear(laddoo_two, laddoo_two_appear)
 
 	await check_level_complete()
 
 
+var level_won: bool = false
+
 func check_level_complete() -> void:
 	if laddoo_one_picked and laddoo_two_picked:
-		await on_game_won()
+		if not level_won:
+			level_won = true
+			await on_game_won()
+
+
+func move_and_appear(item: Control, target: TextureRect) -> void:
+	var tween := create_tween()
+	var target_pos = target.global_position
+	
+	# Move slowly to target
+	tween.tween_property(item, "global_position", target_pos, 0.8) \
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	await tween.finished
+	item.visible = false
+	
+	# Small pop when it lands
+	target.visible = true
+	target.modulate.a = 1.0
+	target.scale = Vector2(1.2, 1.2)
+	
+	var pop_tween := create_tween()
+	pop_tween.tween_property(target, "scale", Vector2.ONE, 0.2) \
+		.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 
 func on_game_won() -> void:
@@ -158,7 +185,7 @@ func on_game_won() -> void:
 		level_completed.play()
 		await level_completed.finished
 
-	get_tree().change_scene_to_file("res://scene/play_scene_three.tscn")
+	next_button.visible = true
 
 
 func disappear_item(item: Control) -> void:
@@ -207,7 +234,7 @@ func drop_in_label(label: Label, delay: float = 0.0) -> void:
 
 func _on_home_button_pressed() -> void:
 	pressed_sound.play()
-	MusicManager.splash_icon(home_button)
+	MusicManager.splash_icon(back_button)
 	get_tree().change_scene_to_file("res://scene/start_scene.tscn")
 	
 
@@ -217,3 +244,9 @@ func _on_sound_button_pressed() -> void:
 	MusicManager.toggle_music()
 	MusicManager.splash_icon(sound_button)
 	MusicManager.sync_sound_button(sound_button)
+
+
+func _on_next_button_pressed() -> void:
+	pressed_sound.play()
+	MusicManager.splash_icon(next_button)
+	get_tree().change_scene_to_file("res://scene/play_scene_three.tscn")

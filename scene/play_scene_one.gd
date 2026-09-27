@@ -33,7 +33,8 @@ extends Node2D
 @export var drop_in_duration: float = 0.5
 @export var drop_in_stagger: float = 0.15
 @onready var sound_button: TextureButton = $UI/SoundButton
-@onready var home_button: TextureButton = $UI/HomeButton
+@onready var next_button: TextureButton = $UI/NextButton
+@onready var back_button: TextureButton = $UI/BackButton
 
 @export var preview_duration: float = 2.0   # kitni der tak saare cards khule dikhenge
 
@@ -45,6 +46,7 @@ var matched_count: int = 0
 
 
 func _ready() -> void:
+	next_button.visible = false
 	cards = [
 		{"button": tab_button_1, "object": shocks,   "id": "socks",  "matched": false, "flipped": false},
 		{"button": tab_button_2, "object": shoes,    "id": "shoes",  "matched": false, "flipped": false},
@@ -392,12 +394,11 @@ func on_game_won() -> void:
 		level_completed.play()
 		await level_completed.finished
 
-	get_tree().change_scene_to_file("res://scene/play_scene_two.tscn")
-
+	next_button.visible = true
 
 func _on_home_button_pressed() -> void:
 	pressed_sound.play()
-	MusicManager.splash_icon(home_button)
+	MusicManager.splash_icon(back_button)
 	get_tree().change_scene_to_file("res://scene/start_scene.tscn")
 
 
@@ -406,3 +407,9 @@ func _on_sound_button_pressed() -> void:
 	MusicManager.toggle_music()
 	MusicManager.sync_sound_button(sound_button)
 	MusicManager.splash_icon(sound_button)
+
+
+func _on_next_button_pressed() -> void:
+	pressed_sound.play()
+	MusicManager.splash_icon(next_button)
+	get_tree().change_scene_to_file("res://scene/play_scene_two.tscn")
